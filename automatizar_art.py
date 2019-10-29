@@ -36,21 +36,21 @@ empresacontratada.send_keys('')
 contratante = browser.find_element_by_xpath("//*[@id='txtContratante']")
 contratante.send_keys('Condominio')
 
-#CNPJ
+#CNPJ do contratante
 botaocnpj1 = browser.find_element_by_xpath("//*[@id='rblCnpjContratante']")
 botaocnpj1.click()
 time.sleep(3)
 cnpj1 = browser.find_element_by_xpath("//*[@id='txtCNPJ']")
-cnpj1.send_keys('')
+cnpj1.send_keys('10965925000120')
 
 #CEP / Endereço
 cep1 = browser.find_element_by_xpath("//*[@id='ContentPlaceHolder1_UCEnderecoContratante_txtCep']")
-cep1.send_keys('')
+cep1.send_keys('33202810')
 botaocep1 = browser.find_element_by_xpath("//*[@id='ContentPlaceHolder1_UCEnderecoContratante_btnPesquisarCep']")
 botaocep1.click()
 time.sleep(10)
 numero1 = browser.find_element_by_xpath("//*[@id='ContentPlaceHolder1_UCEnderecoContratante_txtNumero']")
-numero1.send_keys('')
+numero1.send_keys('100')
 
 #Data do contrato
 datacontrato = browser.find_element_by_xpath("//*[@id='ContentPlaceHolder1_txtDataContrato']")
@@ -64,7 +64,96 @@ valorhono.send_keys('200000')
 tipocontratante = browser.find_element_by_xpath("//*[@id='ddlTipoContratante']")
 tipocontratante.send_keys("PESSOA JURIDICA DE DIREITO PRIVADO")
 
+#Data de início da obra
+dataini = browser.find_element_by_xpath("//*[@id='ContentPlaceHolder1_txtDataInicioObraServico']")
+dataini.send_keys("23/10/2019")
 
+#Data de final da obra
+datatermi = browser.find_element_by_xpath("//*[@id='ContentPlaceHolder1_txtPrevisaoTerminoObraServico']")
+datatermi.send_keys('22/10/2020')
+
+#Valor da obra
+valorobra = browser.find_element_by_xpath("//*[@id='txtValorObra']")
+valorobra.send_keys('450000')
+
+#Finalidade do prédio
+finalidade = browser.find_element_by_xpath("//*[@id='ContentPlaceHolder1_ddlFinalidades']")
+finalidade.send_keys("COMERCIAL")
+
+#Proprietário do prédio
+proprie = browser.find_element_by_xpath("//*[@id='txtProprietario']")
+proprie.send_keys('Condominio')
+
+#CNPJ da obra
+botaocnpj2 = browser.find_element_by_xpath("//*[@id='rblCnpjProprietario']")
+botaocnpj2.click()
+time.sleep(3)
+cnpj2 = browser.find_element_by_xpath("//*[@id='txtCnpjProprietario']")
+cnpj2.send_keys('10965925000120')
+
+#CEP / Endereço da obra
+cep2 = browser.find_element_by_xpath("//*[@id='ContentPlaceHolder1_UCMenuEndereco1_endereco1_txtCep']")
+cep2.send_keys('33202810')
+botaocep2 = browser.find_element_by_xpath("//*[@id='ContentPlaceHolder1_UCMenuEndereco1_endereco1_btnPesquisarCep']")
+botaocep2.click()
+time.sleep(10)
+numero2 = browser.find_element_by_xpath("//*[@id='ContentPlaceHolder1_UCMenuEndereco1_endereco1_txtNumero']")
+numero2.send_keys('100')
+
+#Cadastro do Laudo
+grupoareaatuacao1 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica1_conteudo']/select[1]")
+grupoareaatuacao1.send_keys('ENGENHARIA INDUSTRIAL')
+time.sleep(3)
+nivelatuacao1 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica1_conteudo']/select[2]")
+nivelatuacao1.send_keys('EXECUÇÃO')
+atividadeprof1 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica1_conteudo']/select[3]")
+atividadeprof1.send_keys('31 - LAUDO')
+areaatuacao1 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica1_conteudo']/select[4]")
+areaatuacao1.send_keys('60 - MECANICA')
+obraservico1 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica1_conteudo']/select[5]")
+obraservico1.send_keys('EQUIPAMENTOS - MÁQUINAS ELÉTRICOS OU ELETRÔNICOS')
+time.sleep(3)
+complemento1 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica1_conteudo']/select[6]")
+complemento1.send_keys('ELEVADORES')
+quantidade1 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica1_conteudo']/input")
+quantidade1.send_keys('100')
+unidade1 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica1_conteudo']/select[7]")
+unidade1.send_keys('un - UNIDADE')
+
+#Cadastro do serviço de manutenção do elevador
+botaoincluir = browser.find_element_by_xpath("//*[@id='btnIncluirAtividadeTecnica']")
+botaoincluir.click()
+time.sleep(6)
+grupoareaatuacao2 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica2_conteudo']/select[1]")
+grupoareaatuacao2.send_keys('ENGENHARIA INDUSTRIAL')
+time.sleep(3)
+nivelatuacao2 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica2_conteudo']/select[2]")
+nivelatuacao2.send_keys('EXECUÇÃO')
+atividadeprof2 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica2_conteudo']/select[3]")
+atividadeprof2.send_keys('33 - INSTALAÇÃO/MANUTENÇÃO DE EQUIPAMENTO')
+areaatuacao2 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica2_conteudo']/select[4]")
+areaatuacao2.send_keys('60 - MECANICA')
+obraservico2 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica2_conteudo']/select[5]")
+obraservico2.send_keys('EQUIPAMENTOS - MÁQUINAS ELÉTRICOS OU ELETRÔNICOS')
+time.sleep(3)
+complemento2 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica2_conteudo']/select[6]")
+complemento2.send_keys('ELEVADORES')
+quantidade2 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica2_conteudo']/input")
+quantidade2.send_keys('100')
+unidade2 = browser.find_element_by_xpath("//*[@id='abaAtividadeTecnica2_conteudo']/select[7]")
+unidade2.send_keys('un - UNIDADE')
+
+#Descrição do serviço/Observações
+observacoes = browser.find_element_by_xpath("//*[@id='ContentPlaceHolder1_txtObservacoes']")
+observacoes.send_keys('Manutencao de 1 elevador')
+
+#Estou ciente
+estouciente = browser.find_element_by_xpath("//*[@id='chkLivroOrdemSim']")
+estouciente.click()
+
+#Entidade de Classe
+entclasse = browser.find_element_by_xpath("//*[@id='ContentPlaceHolder1_ddlEntidadeClasse']")
+entclasse.send_keys('60 - SINDICATO DE ENGENHEIROS NO ESTADO DE MINAS GERAIS - SENGE-MG')
 
 
 '''
